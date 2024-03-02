@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Controllers Imports
-const { uploadFile } = require("../../controllers/v1/upload");
+const { uploadFile } = require("../../controllers/v1/uploadFile");
 
 // Setup the Route's Endpoints and Controlelr
 router.route("/").post(upload.single("file"), uploadFile);
