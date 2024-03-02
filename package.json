@@ -1,0 +1,25 @@
+{
+  "name": "file-upload-using-multer",
+  "version": "1.0.0",
+  "description": "An Implementation of Multer to Upload Files to an Express API Server",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch-path=./src index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/arijitcodes/file-upload-using-multer.git"
+  },
+  "keywords": [
+    "multer",
+    "file",
+    "upload"
+  ],
+  "author": "Arijit Banerjee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arijitcodes/file-upload-using-multer/issues"
+  },
+  "homepage": "https://github.com/arijitcodes/file-upload-using-multer#readme"
+}
