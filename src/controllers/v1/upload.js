@@ -8,9 +8,10 @@ const uploadFile = (req, res) => {
     // return res.status(400).json({ error: "No file uploaded" });
   }
 
-  return res
-    .status(200)
-    .json({ message: "File Uploaded Successfully", file: req.file });
+  return res.status(200).json({
+    message: "File Uploaded Successfully",
+    file: "http://localhost:5000/files/" + req.file.filename,
+  });
 };
 
 // Export the Controllers

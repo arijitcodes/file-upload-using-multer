@@ -7,7 +7,10 @@ const app = express();
 // Setup Express Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+
+// Serving uploaded files through /files/:file_name route
+// app.use(express.static("public"));
+app.use("/files", express.static("public"));
 
 // Setup Routes
 app.get("/", (_, res) => {
