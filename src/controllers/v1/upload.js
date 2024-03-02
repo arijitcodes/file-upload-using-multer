@@ -1,8 +1,11 @@
+const APIError = require("http-errors");
+
 // File upload Route Controller
 const uploadFile = (req, res) => {
   //   res.send("hello, you have reached the Upload Route... 📁 ☁");
   if (!req.file) {
-    return res.status(400).json({ error: "No file uploaded" });
+    throw new APIError.ExpectationFailed("No File was Sent!");
+    // return res.status(400).json({ error: "No file uploaded" });
   }
 
   return res
