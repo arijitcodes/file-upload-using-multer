@@ -1,6 +1,5 @@
 const express = require("express");
 const { errorHandler } = require("./errorHandlers/errorHandler");
-const createError = require("http-errors");
 
 const app = express();
 
@@ -18,7 +17,10 @@ app.get("/", (_, res) => {
 });
 
 // API Healthcheck Route
-app.get("/healthcheck", (_, res) => {
+app.get("/healthcheck", (req, res) => {
+  console.log(req.protocol);
+  console.log(req.hostname);
+  console.log(req.originalUrl);
   return res.status(200).json({ message: "API is healthy" });
 });
 

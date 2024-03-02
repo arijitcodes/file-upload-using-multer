@@ -10,7 +10,15 @@ const uploadFile = (req, res) => {
 
   return res.status(200).json({
     message: "File Uploaded Successfully",
-    file: "http://localhost:5000/files/" + req.file.filename,
+    file:
+      (process.env.API_BASE_URL ||
+        req.protocol +
+          "://" +
+          req.hostname +
+          ":" +
+          (process.env.PORT || 5000)) +
+      "/files/" +
+      req.file.filename,
   });
 };
 
