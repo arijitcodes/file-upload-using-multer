@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/arijitcodes/file-upload-using-multer/issues"
   },
-  "homepage": "https://github.com/arijitcodes/file-upload-using-multer#readme"
+  "homepage": "https://github.com/arijitcodes/file-upload-using-multer#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  }
 }
